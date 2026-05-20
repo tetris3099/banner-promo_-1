@@ -5,6 +5,25 @@
   --font5: 'Google Sans Flex', sans-serif;
 }
 
+@keyframes mobile-banner {
+  from {
+    opacity: 0;
+    object-position: left;
+  }
+  15% {
+    opacity: 1;
+    object-position: left;
+  }
+  75% {
+    opacity: 1;
+    object-position: right;
+  }
+  to {
+    object-position: right;
+    opacity: 0;
+  }
+}
+
 * {
   text-decoration: none;
   margin: 0;
@@ -26,6 +45,11 @@
   scrollbar-width: thin;
   scrollbar-color: #ff4400 #fd954bd2;
 
+  @media screen and (max-width: 700px) {
+    padding: 15px;
+    padding-bottom: 20px;
+  }
+
   &__banner {
     width: 100%;
     max-height: 400px;
@@ -36,12 +60,24 @@
       max-height: 435px;
       margin-bottom: 44px;
     }
+
+    @media screen and (max-width: 700px) {
+      margin-bottom: 0;
+    }
   }
 
   &__banner-img {
     width: 100%;
     height: auto;
     object-fit: contain;
+
+    @media screen and (max-width: 700px) {
+      height: 230px;
+      object-fit: cover;
+      object-position: left;
+      animation: mobile-banner 8s ease infinite;
+      animation-delay: 0;
+    }
   }
 
   &__content {
@@ -57,9 +93,14 @@
     gap: 56px;
     padding-bottom: 87px;
 
-    @media screen and (max-width: 1400px) { 
+    @media screen and (max-width: 1400px) {
       gap: 30px;
       padding-bottom: 57px;
+    }
+
+    @media screen and (max-width: 700px) {
+      gap: 20px;
+      padding-bottom: 25px;
     }
   }
 
@@ -75,6 +116,14 @@
     @media screen and (max-width: 1400px) {
       font-size: 65px;
     }
+
+    @media screen and (max-width: 700px) {
+      font-size: 33px;
+
+      & > br {
+        display: none;
+      }
+    }
   }
 
   &__text {
@@ -87,6 +136,10 @@
 
     @media screen and (max-width: 1400px) {
       font-size: 44px;
+    }
+
+    @media screen and (max-width: 700px) {
+      font-size: 24px;
     }
   }
 
@@ -118,7 +171,15 @@
       font-size: 40px;
       height: 100px;
       padding-right: 0;
+    }
 
+    @media screen and (max-width: 700px) { 
+      font-size: 30px;
+      gap: 21px;
+      padding-left: 11.84px;
+      padding-right: 11.84px;
+      height: 80px;
+      width: max-content;
     }
   }
 
@@ -131,9 +192,14 @@
     width: 102.96px;
     height: 102.96px;
 
-    @media screen and (max-width: 1400px) { 
+    @media screen and (max-width: 1400px) {
       width: 95.96px;
       height: 80.96px;
+    }
+
+    @media screen and (max-width: 700px) { 
+      width: 75px;
+      height: 60px;
     }
 
     & > svg {

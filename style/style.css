@@ -3,6 +3,28 @@
   --font5: 'Google Sans Flex', sans-serif;
 }
 
+@keyframes mobile-banner {
+  from {
+    opacity: 0;
+    -o-object-position: left;
+       object-position: left;
+  }
+  15% {
+    opacity: 1;
+    -o-object-position: left;
+       object-position: left;
+  }
+  75% {
+    opacity: 1;
+    -o-object-position: right;
+       object-position: right;
+  }
+  to {
+    -o-object-position: right;
+       object-position: right;
+    opacity: 0;
+  }
+}
 * {
   text-decoration: none;
   margin: 0;
@@ -24,6 +46,12 @@
   scrollbar-width: thin;
   scrollbar-color: #ff4400 rgba(253, 149, 75, 0.8235294118);
 }
+@media screen and (max-width: 700px) {
+  .promo-modal {
+    padding: 15px;
+    padding-bottom: 20px;
+  }
+}
 .promo-modal__banner {
   width: 100%;
   max-height: 400px;
@@ -36,11 +64,27 @@
     margin-bottom: 44px;
   }
 }
+@media screen and (max-width: 700px) {
+  .promo-modal__banner {
+    margin-bottom: 0;
+  }
+}
 .promo-modal__banner-img {
   width: 100%;
   height: auto;
   -o-object-fit: contain;
      object-fit: contain;
+}
+@media screen and (max-width: 700px) {
+  .promo-modal__banner-img {
+    height: 230px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: left;
+       object-position: left;
+    animation: mobile-banner 8s ease infinite;
+    animation-delay: 0;
+  }
 }
 .promo-modal__content {
   margin: 0 auto;
@@ -60,6 +104,12 @@
     padding-bottom: 57px;
   }
 }
+@media screen and (max-width: 700px) {
+  .promo-modal__text-wrapper {
+    gap: 20px;
+    padding-bottom: 25px;
+  }
+}
 .promo-modal__title {
   font-family: var(--font5);
   font-weight: 500;
@@ -74,6 +124,14 @@
     font-size: 65px;
   }
 }
+@media screen and (max-width: 700px) {
+  .promo-modal__title {
+    font-size: 33px;
+  }
+  .promo-modal__title > br {
+    display: none;
+  }
+}
 .promo-modal__text {
   font-family: var(--font5);
   font-weight: 400;
@@ -85,6 +143,11 @@
 @media screen and (max-width: 1400px) {
   .promo-modal__text {
     font-size: 44px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .promo-modal__text {
+    font-size: 24px;
   }
 }
 .promo-modal__button {
@@ -114,6 +177,17 @@
     padding-right: 0;
   }
 }
+@media screen and (max-width: 700px) {
+  .promo-modal__button {
+    font-size: 30px;
+    gap: 21px;
+    padding-left: 11.84px;
+    padding-right: 11.84px;
+    height: 80px;
+    width: -moz-max-content;
+    width: max-content;
+  }
+}
 .promo-modal__button-icon {
   display: flex;
   justify-content: center;
@@ -127,6 +201,12 @@
   .promo-modal__button-icon {
     width: 95.96px;
     height: 80.96px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .promo-modal__button-icon {
+    width: 75px;
+    height: 60px;
   }
 }
 .promo-modal__button-icon > svg {
