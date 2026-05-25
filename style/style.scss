@@ -35,31 +35,21 @@
 .promo-modal {
   width: 100vw;
   height: 100vh;
-  max-width: 1716px;
-  max-height: 1152px;
-  padding: 48px;
-  padding-bottom: 77px;
+  max-width: 800px;
+  max-height: 530px;
+  padding: 18px 15px 15px 15px;
+  border-radius: 20px;
   margin: 0 auto;
   background: linear-gradient(180deg, #fe6a00 0%, #de5c15 100%);
   overflow-y: auto;
   scrollbar-width: thin;
   scrollbar-color: #ff4400 #fd954bd2;
 
-  @media screen and (max-width: 700px) {
-    padding: 15px;
-    padding-bottom: 20px;
-  }
-
   &__banner {
     width: 100%;
-    max-height: 400px;
+    height: 208px;
     margin: 0 auto;
-    margin-bottom: 64px;
-
-    @media screen and (max-width: 1400px) {
-      max-height: 435px;
-      margin-bottom: 44px;
-    }
+    margin-bottom: 32px;
 
     @media screen and (max-width: 700px) {
       margin-bottom: 0;
@@ -68,12 +58,10 @@
 
   &__banner-img {
     width: 100%;
-    height: auto;
-    object-fit: contain;
+    height: 100%;
+    object-fit: cover;
 
     @media screen and (max-width: 700px) {
-      height: 230px;
-      object-fit: cover;
       object-position: left;
       animation: mobile-banner 8s ease infinite;
       animation-delay: 0;
@@ -82,7 +70,7 @@
 
   &__content {
     margin: 0 auto;
-    max-width: 1523px;
+    // max-width: 1523px;
   }
 
   &__text-wrapper {
@@ -90,13 +78,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 56px;
-    padding-bottom: 87px;
-
-    @media screen and (max-width: 1400px) {
-      gap: 30px;
-      padding-bottom: 57px;
-    }
+    gap: 28px;
+    max-width: 710px;
+    margin: 0 auto;
+    padding-bottom: 37px;
 
     @media screen and (max-width: 700px) {
       gap: 20px;
@@ -107,15 +92,11 @@
   &__title {
     font-family: var(--font5);
     font-weight: 500;
-    font-size: 88px;
-    line-height: 106%;
+    font-size: 36px;
+    line-height: 111%;
     letter-spacing: -0.01em;
     text-align: center;
     color: #fff;
-
-    @media screen and (max-width: 1400px) {
-      font-size: 65px;
-    }
 
     @media screen and (max-width: 700px) {
       font-size: 33px;
@@ -129,52 +110,38 @@
   &__text {
     font-family: var(--font5);
     font-weight: 400;
-    font-size: 54px;
-    line-height: 117%;
+    font-size: 20px;
+    line-height: 140%;
     text-align: center;
-    color: rgba(255, 255, 255, 0.8);
-
-    @media screen and (max-width: 1400px) {
-      font-size: 44px;
-    }
-
-    @media screen and (max-width: 700px) {
-      font-size: 24px;
-    }
+    color: #fff;
   }
 
   &__button {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 46px;
+    gap: 28px;
 
     font-family: var(--second-family);
     font-weight: 500;
-    font-size: 40px;
-    line-height: 171%;
+    font-size: 18px;
+    line-height: 178%;
     text-align: center;
     color: #fff;
 
     margin: 0 auto;
-    border-radius: 23px;
-    max-width: 421.8px;
-    height: 125px;
-    padding-right: 11.44px;
-    padding-left: 68.64px;
+
+    border-radius: 10px;
+    padding: 4px 4px 4px 32px;
+    width: 199px;
+    height: 56px;
+
     box-shadow:
-      0 18px 47px -12px rgba(0, 0, 0, 0.05),
-      0 6px 9px -6px rgba(0, 0, 0, 0.05);
+      0 8px 21px -5px rgba(0, 0, 0, 0.05),
+      0 3px 4px -3px rgba(0, 0, 0, 0.05);
     background: linear-gradient(180deg, #4d5160 0%, #252730 100%);
 
-    @media screen and (max-width: 1400px) {
-      font-size: 40px;
-      height: 100px;
-      padding-right: 0;
-    }
-
-    @media screen and (max-width: 700px) { 
-      font-size: 30px;
+    @media screen and (max-width: 700px) {
       gap: 21px;
       padding-left: 19.84px;
       padding-right: 19.84px;
@@ -188,26 +155,19 @@
     justify-content: center;
     align-items: center;
     background: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    width: 102.96px;
-    height: 102.96px;
+    border-radius: 5px;
+    width: 48px;
+    height: 48px;
 
-    @media screen and (max-width: 1400px) {
-      width: 95.96px;
-      height: 80.96px;
-    }
-
-    @media screen and (max-width: 700px) { 
-      width: 75px;
-      height: 60px;
-    }
-
-    & > svg {
+    & > span {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       transition: all 0.3s ease;
     }
   }
 }
 
-.promo-modal__button:hover .promo-modal__button-icon > svg {
+.promo-modal__button:hover .promo-modal__button-icon > span {
   transform: rotateZ(45deg);
 }
