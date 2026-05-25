@@ -46,15 +46,20 @@
   scrollbar-width: thin;
   scrollbar-color: #ff4400 rgba(253, 149, 75, 0.8235294118);
 }
+@media screen and (max-width: 799.9px) {
+  .promo-modal {
+    width: 95vw;
+  }
+}
 .promo-modal__banner {
   width: 100%;
   height: 208px;
   margin: 0 auto;
   margin-bottom: 32px;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 799.9px) {
   .promo-modal__banner {
-    margin-bottom: 0;
+    margin-bottom: 15px;
   }
 }
 .promo-modal__banner-img {
@@ -63,7 +68,7 @@
   -o-object-fit: cover;
      object-fit: cover;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 780px) {
   .promo-modal__banner-img {
     -o-object-position: left;
        object-position: left;
@@ -84,10 +89,10 @@
   margin: 0 auto;
   padding-bottom: 37px;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 799.9px) {
   .promo-modal__text-wrapper {
-    gap: 20px;
-    padding-bottom: 25px;
+    gap: 12px;
+    padding-bottom: 19px;
   }
 }
 .promo-modal__title {
@@ -99,9 +104,9 @@
   text-align: center;
   color: #fff;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 799.9px) {
   .promo-modal__title {
-    font-size: 33px;
+    font-size: 31px;
   }
   .promo-modal__title > br {
     display: none;
@@ -134,12 +139,9 @@
   box-shadow: 0 8px 21px -5px rgba(0, 0, 0, 0.05), 0 3px 4px -3px rgba(0, 0, 0, 0.05);
   background: linear-gradient(180deg, #4d5160 0%, #252730 100%);
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 799.9px) {
   .promo-modal__button {
     gap: 21px;
-    padding-left: 19.84px;
-    padding-right: 19.84px;
-    height: 80px;
     width: -moz-max-content;
     width: max-content;
   }
